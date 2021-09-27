@@ -1,0 +1,86 @@
+.buscaid{
+  position:absolute;
+  top: 0px; left: 1250px;
+
+}
+mat-paginator{
+  background-color: #0a9396;
+}
+.buscaorigen{
+  position: absolute;
+  top: 0px; left: 1050px;
+
+}
+.buscamercado{
+  position: absolute;
+top: 50px; left: 1250px;
+color: #001219;
+}
+.buscaproducto{
+  display: flex;
+  position: absolute;
+top: 50px; left: 1050px;
+color: #001219;
+}
+.resultadotabla{
+ 
+  width: 20px;
+  position: absolute;
+  top: 120px; left: 1050px;
+}
+#resultado{
+  font-size: 10px;
+  color: #001219;
+
+}
+.Total{
+  position: absolute;
+  bottom: 730px;
+  right: 700px;
+  font-size: 22px;
+  color: #001219;
+}
+
+
+@media(min-width: 1500px) {
+  
+  .buscaid{
+    display: flex;
+    position: absolute;
+    top: 0px; left: 1650px;
+  
+  }
+  .buscaorigen{
+    display: flex;
+    position: absolute;
+    top: 0px; left: 1450px;
+  
+  }
+  .buscamercado{
+    position: absolute;
+  top: 50px; left: 1650px;
+  }
+  .buscaproducto{
+    display: flex;
+    position: absolute;
+  top: 50px; left: 1450px;
+  }
+
+  .resultadotabla{
+
+  max-width: 800px;
+  position: absolute;
+  top: 100px; left: 1400px;
+
+  }
+
+
+
+
+}
+
+
+
+
+
+

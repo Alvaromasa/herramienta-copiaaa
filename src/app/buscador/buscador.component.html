@@ -1,0 +1,53 @@
+
+<mat-paginator [length]="resultfiltro.length"
+               [pageSize]="page_size"
+               [pageSizeOptions]="pageSizeOptions"
+               (page)="handlePage($event)"
+               >
+</mat-paginator>
+
+
+<table class="table" >
+    <thead>
+      <tr>
+        <th scope="col" class="buscaorigen">
+            <input placeholder="busca origen"
+            (keyup)="beginSearch($event)"
+            [(ngModel)]="origenSearch">
+        </th>
+        <th scope="col" class="buscamercado">
+            <input 
+            placeholder="Busca Mercado"
+            (keyup)="beginSearch($event)"
+            [(ngModel)]="idSearch">
+        </th>
+        <th scope="col" class="buscaproducto">
+            <input placeholder="busca producto"
+            (keyup)="beginSearch($event)"
+            [(ngModel)]="productSearch">
+        </th>
+        <th scope="col" class="buscaid">
+            <input placeholder="busca id...."
+            (keyup)="beginSearch($event)"
+            [(ngModel)]="enlaceSearch">
+        </th>
+      </tr>
+    </thead>
+    <tbody class="resultadotabla">
+      <tr id="resultado" *ngFor="let post of resultfiltro | pagination:page_size:page_number; let indice = index; ">
+        <td><button mat-raised-button color ="primary" (click)="onClick(post)">detalles</button></td>
+        <td class="indice">{{indice + 1}}</td>
+        <th class ="origen" scope="post">{{post.origen}}</th>
+        <td class="id">{{post.Market}} </td>
+        <td class="product">{{post.product}}</td>
+        <td class="enlace">{{post.ID}}}</td>
+    </tr>
+  
+    </tbody>
+  </table>
+  <div class="Total">
+    <h4>Total: {{resultfiltro.length}}</h4>
+     
+ 
+   </div>
+  <app-detallesproductos [post]="post"></app-detallesproductos>

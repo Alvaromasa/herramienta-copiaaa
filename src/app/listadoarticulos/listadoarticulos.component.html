@@ -1,0 +1,11 @@
+<tbody class="resultadotabla">
+  <tr id="resultado" *ngFor="let post of posts ; let indice = index">
+    <td><button md-button (click)="onClick(post)">detalles</button></td>
+    <td class="indice">{{indice + 1}}</td>
+    <th class ="origen" scope="post">{{post.name}}</th>
+    <td class="id">{{post.status}} </td>
+    <td class="product">{{post.product}}</td>
+    <td class="enlace">{{post.ID}}}</td>
+</tr>
+
+</tbody>
